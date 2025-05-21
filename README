@@ -1,0 +1,8 @@
+file structuer
+project/
+├── index.html        (login page)
+├── signup.html       (signup page)
+├── home.html         (home page)
+├── auth.js           (authentication logic)
+├── users.json        (will store user data)
+└── style.css         (styling)

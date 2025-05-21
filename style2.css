@@ -1,0 +1,106 @@
+/* General body styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url(images/Buscor_Cover_0320.jpeg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Form container */
+#signupForm {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Inputs */
+#signupForm input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Button */
+#signupForm button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f4e542;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#signupForm button:hover {
+  background-color: #e0d13a;
+}
+
+/* Links */
+#signupForm a {
+  color: #4285f4;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#signupForm a:hover {
+  text-decoration: underline;
+}
+
+/* Logo container */
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* Logo image */
+.logo img {
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+
+/* ✅ Mobile adjustments */
+@media (max-width: 480px) {
+  #signupForm {
+    padding: 20px 15px;
+  }
+
+  #signupForm input,
+  #signupForm button {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  #signupForm h2 {
+    font-size: 20px;
+  }
+}

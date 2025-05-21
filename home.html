@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+   <!-- Navigation Bar -->
+  <nav class="navbar">
+    <h1>Welcome</h1>
+        <button id="topupBtn">Top Up</button>
+    <button id="logoutBtn">Logout</button>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="home-content">
+    <h2>Hello, <span id="userEmail">User</span></h2>
+    <div class="trip-balance">
+      <h3>Your Trip Balance</h3>
+      <p id="balanceAmount">R 0.00</p>
+    </div>
+  </div>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Check if user is logged in
+    const currentUser = localStorage.getItem('currentUser');
+    if (!currentUser) {
+      alert('You must be logged in to access this page.');
+      window.location.href = 'index.html';
+      return;
+    }
+
+    // Logout functionality
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      localStorage.removeItem('currentUser');
+      alert('You have been logged out.');
+      window.location.href = 'index.html';
+    });
+  });
+</script>
+
+</body>
+</html>
