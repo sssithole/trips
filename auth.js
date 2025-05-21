@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Check if user already exists
       if (users.some(user => user.email === email)) {
-        alert('User already exists');
+        // alert('User already exists');
         return;
       }
 
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
       users.push({ email, password });
       saveUsers(users);
 
-      alert('Signup successful! Please log in.');
+      // ('Signup successful! Please log in.');
       window.location.href = 'index.html';
     });
   }
@@ -60,10 +60,10 @@ document.addEventListener('DOMContentLoaded', () => {
       // ✅ This is the key part:
       localStorage.setItem('currentUser', JSON.stringify(user));
 
-      alert('Login successful!');
+      // alert('Login successful!');
       window.location.href = 'home.html';
     } else {
-      alert('Invalid email or password');
+      // alert('Invalid email or password');
     }
   });
 }
