@@ -2,12 +2,14 @@
 <html>
 <head>
   <title>Home</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="home.css">
 </head>
 <body>
    <!-- Navigation Bar -->
   <nav class="navbar">
-    <h1>Welcome</h1>
+    <h1>Sithma</h1>
         <button id="topupBtn">Top Up</button>
     <button id="logoutBtn">Logout</button>
   </nav>
@@ -25,19 +27,29 @@
     // Check if user is logged in
     const currentUser = localStorage.getItem('currentUser');
     if (!currentUser) {
-      // alert('You must be logged in to access this page.');
+      alert('You must be logged in to access this page.');
       window.location.href = 'index.html';
       return;
     }
 
+    // Display user email
+    const currentUserData = JSON.parse(currentUser);
+    document.getElementById('userEmail').textContent = currentUserData.email;
+
     // Logout functionality
     document.getElementById('logoutBtn').addEventListener('click', () => {
       localStorage.removeItem('currentUser');
-      // alert('You have been logged out.');
+      alert('You have been logged out.');
       window.location.href = 'index.html';
+    });
+
+    // Optional: handle top up button
+    document.getElementById('topupBtn').addEventListener('click', () => {
+      alert("Top up feature coming soon!");
     });
   });
 </script>
+
 
 </body>
 </html>
